@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self'; manifest-src 'self'; worker-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+<title>Finora · your money, made clear</title>
+<meta name="description" content="Track spending, lend and split with friends, get reminded before bills are due. Works fully on your device.">
+<meta name="theme-color" content="#F7F7F5">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Finora">
+<link rel="stylesheet" href="app.css">
+</head>
+<body class="gated">
+<div id="splash"><svg class="mark" width="68" height="68" viewBox="0 0 48 48"><rect width="48" height="48" rx="13" fill="#111214"/><circle cx="24" cy="24" r="15.5" fill="none" stroke="#fff" stroke-opacity=".14" stroke-width="1.2"/><path d="M19 35V16h14M19 25.5h11" stroke="#F3F3F1" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/><circle cx="35" cy="35" r="3.1" fill="#3DD6A5"><animateTransform attributeName="transform" type="rotate" from="0 24 24" to="360 24 24" dur="2.4s" repeatCount="indefinite"/></circle></svg></div>
+<main id="view"></main>
+<nav id="nav" aria-label="Main"></nav>
+<button class="finb" id="finb" onclick="finOpen()" aria-label="Ask Fin"></button>
+<button class="fab" id="fab" onclick="txSheet()" aria-label="Add payment"></button>
+<div id="overlay" onclick="if(event.target===this)closeSheet()"><div id="sheet" role="dialog" aria-modal="true"></div></div>
+<div id="popw" onclick="if(event.target===this)closePop()"><div id="pop"></div></div>
+<div id="gate"></div>
+<div id="toast" role="status" aria-live="polite"></div>
+<script src="js/local.js"></script>
+<script src="js/core.js"></script>
+<script src="js/views.js"></script>
+<script src="js/views2.js"></script>
+<script src="js/settings.js"></script>
+<script src="js/report.js"></script>
+<script src="js/legal.js"></script>
+<script src="js/fin.js"></script>
+<script src="js/quickadd.js"></script>
+<script src="js/auth.js"></script>
+</body>
+</html>
